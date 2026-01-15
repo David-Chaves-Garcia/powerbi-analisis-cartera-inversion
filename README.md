@@ -42,14 +42,15 @@ Análisis individual de un activo, con evolución de la posición y su historial
 
 ### 🖼️ Capturas del dashboard
 Overview
-
+![Overview](Screenshots/Overview.png)
 Composición y Rendimiento
-
+![Composición y Rendimiento](Screenshots/Composición y Rendimiento.png)
 Riesgo y Comparación
-
+![Riesgo y Comparación](Screenshots/Riesgo y Comparación.png)
 Transacciones
-
+![Transacciones](Screenshots/Transacciones.png)
 Detalles del activo
+![Detalles del Activo](Screenshots/Detalles del Activo.png)  
 
 ### 📐 Métricas clave
 
