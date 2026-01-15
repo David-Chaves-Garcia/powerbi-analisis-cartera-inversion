@@ -1,6 +1,6 @@
 # powerbi-analisis-cartera-inversion
 ## Dashboard de Seguimiento de Cartera de Inversión (Power BI)
-
+Enlace al Dashboard de Power BI: [Cartera Inversión](https://app.powerbi.com/view?r=eyJrIjoiNzBmMWUzNmItMzJhNi00MTEzLWJiN2UtN2MxYTc1MTMyMzZiIiwidCI6IjhmMGQ0NTJjLWI3YTQtNDk2NC1iODEwLThjMzk3Mzc0NDc3YiIsImMiOjh9&pageName=f55a4d30671540ec1591)
 ### 🎯 Contexto del proyecto
 
 Este proyecto se desarrolló con el objetivo de construir un dashboard que permitiera analizar una cartera de inversión de forma estructurada, separando claramente:
