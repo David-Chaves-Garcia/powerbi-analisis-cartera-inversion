@@ -1,0 +1,13 @@
+Ticker;Source;Asset Name;Tipo de Activo;Currency;ISIN;Asset Class;IsBenchmark
+GOOGL;GOOGL;Alphabet;Stock;USD;US02079K3059;Equity;False
+MSFT;MSFT;Microsoft;Stock;USD;US5949181045;Equity;False
+AAPL;AAPL;Apple;Stock;USD;US0378331005;Equity;False
+GLD;GLD;SPDR Gold Shares;ETF;USD;US78463V1070;Commodity;False
+SLV;SLV;iShares Silver;ETF;USD;US46428Q1094;Commodity;False
+BTC;BTC-USD;Bitcoin;Crypto;USD;;Crypto;True
+ETH;ETH-USD;Ethereum;Crypto;USD;;Crypto;False
+EEM;EEM;iShares MSCI Emerging Markets;ETF;USD;US4642872349;Equity;False
+URTH;URTH;iShares MSCI World;ETF;USD;US4642863926;Equity;False
+VOO;VOO;Vanguard S&P 500;ETF;USD;US9229083632;Equity;False
+BABA;BABA;Alibaba Group Holdings Ltd ADR;Stock;USD;US01609W1027;Equity;False
+ZM;ZM;Zoom Video Communications Inc;Stock;USD;US98980L1017;Equity;False
