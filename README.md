@@ -44,13 +44,13 @@ Análisis individual de un activo, con evolución de la posición y su historial
 Overview
 ![Overview](Screenshots/Overview.png)
 Composición y Rendimiento
-![Composición y Rendimiento](Screenshots/Composición y Rendimiento.png)
+![Composición y Rendimiento](Screenshots/Composición_Rendimiento.png)
 Riesgo y Comparación
-![Riesgo y Comparación](Screenshots/Riesgo y Comparación.png)
+![Riesgo y Comparación](Screenshots/Riesgo_Comparación.png)
 Transacciones
 ![Transacciones](Screenshots/Transacciones.png)
 Detalles del activo
-![Detalles del Activo](Screenshots/Detalles del Activo.png)  
+![Detalles del Activo](Screenshots/Detalles_Activo.png)  
 
 ### 📐 Métricas clave
 
