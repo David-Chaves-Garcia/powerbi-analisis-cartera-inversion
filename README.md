@@ -13,13 +13,13 @@ El foco no está en mostrar visualizaciones aisladas, sino en responder pregunta
 
 ### ❓ Preguntas que responde el dashboard
 
-· ¿Cómo ha evolucionado el valor de la cartera a lo largo del tiempo?
-· ¿Cuál es el resultado de un período seleccionado en términos absolutos y relativos?
-· ¿Cuál es la composición de la cartera según tipo y activo? Cuál es la rentabilidad de cada uno?
-· ¿Cómo varía el riesgo (volatilidad y drawdown) según el horizonte temporal?
-· ¿Cómo se comporta la cartera frente a un benchmark?
-· ¿Qué impacto tienen los activos y las transacciones individuales en el resultado total?
-· ¿Cuál ha sido la evolución de un activo concreto en la cartera?¿He comprado y vendido el activo en momentos óptimos?
+· ¿Cómo ha evolucionado el valor de la cartera a lo largo del tiempo?  
+· ¿Cuál es el resultado de un período seleccionado en términos absolutos y relativos?  
+· ¿Cuál es la composición de la cartera según tipo y activo? Cuál es la rentabilidad de cada uno?  
+· ¿Cómo varía el riesgo (volatilidad y drawdown) según el horizonte temporal?  
+· ¿Cómo se comporta la cartera frente a un benchmark?  
+· ¿Qué impacto tienen los activos y las transacciones individuales en el resultado total?  
+· ¿Cuál ha sido la evolución de un activo concreto en la cartera?¿He comprado y vendido el activo en momentos óptimos?  
 
 ### 🧭 Estructura del informe
 
@@ -54,30 +54,29 @@ Detalles del activo
 ### 📐 Métricas clave
 
 El dashboard incluye, entre otras, las siguientes métricas:  
-
-· Valor de mercado de la cartera
-· Resultado del período (absoluto y porcentual)
-· Volatilidad (diaria y anualizada)
-· Máximo drawdown
-· Ratio de Sharpe
-· PnL y rentabilidad por activo
+· Valor de mercado de la cartera  
+· Resultado del período (absoluto y porcentual)  
+· Volatilidad (diaria y anualizada)  
+· Máximo drawdown  
+· Ratio de Sharpe  
+· PnL y rentabilidad por activo  
 
 ### 🗂️ Modelo de datos
 El modelo de datos se basa en un enfoque tipo estrella, con:  
-· Tabla de fechas
-· Tabla de activos
-· Tabla de transacciones
-· Histórico de precios
-· El modelo está diseñado para permitir análisis temporales dinámicos sin romper la coherencia de las métricas.
+· Tabla de fechas  
+· Tabla de activos  
+· Tabla de transacciones  
+· Histórico de precios  
+· El modelo está diseñado para permitir análisis temporales dinámicos sin romper la coherencia de las métricas.  
 
 ### 🐍 Preparación de datos (Python)
 #### La arquitectura es la siguiente:  
-assets.csv
-   ↓
-build_prices_master.py   → Prices_Master.csv
-   ↓
-build_prices_filled.py   → Prices_Filled.csv
-   ↓
+assets.csv  
+   ↓  
+build_prices_master.py   → Prices_Master.csv  
+   ↓  
+build_prices_filled.py   → Prices_Filled.csv  
+   ↓  
 build_transactions.py    → Transactions.csv  
 
 La preparación de datos se realiza mediante tres scripts en Python, siguiendo un flujo secuencial y desacoplado.
@@ -87,35 +86,36 @@ Descarga precios históricos desde Yahoo Finance a partir del fichero `assets.cs
 normalizando el formato y generando una tabla maestra de precios (`Prices_Master.csv`) sin relleno temporal.
 
 #### 2. Normalización temporal (`build_prices_filled.py`)
-A partir de la tabla maestra, se construye una serie diaria continua por activo mediante fill-forward del último precio válido,
+A partir de la tabla maestra, se construye una serie diaria continua por activo mediante fill-forward del último precio válido,  
 generando la tabla definitiva de precios (`Prices_Filled.csv`) utilizada en Power BI.
 
 #### 3. Generación de transacciones (`build_transactions.py`)
-Se genera una tabla de transacciones realista combinando:
-- Inversión periódica (DCA)
+Se genera una tabla de transacciones realista combinando:  
+- Inversión periódica (DCA)  
 - Operativa manual de compra y venta  
 
-El proceso respeta límites mensuales de capital, controla posiciones por activo y normaliza importes, comisiones y signos, produciendo una tabla `Transactions.csv` lista para análisis.
-Este enfoque garantiza coherencia entre precios y transacciones, así como una separación clara entre datos raw y datos preparados para BI.
-Se incluye un script en Python para la construcción de la tabla de transacciones a partir de datos brutos exportados del broker.  
-
-El script se encarga de:
-· Normalizar compras y ventas
-· Aplicar convenciones de signo para flujos de caja
-· Gestionar comisiones
-· Generar una tabla limpia lista para Power BI
+El proceso respeta límites mensuales de capital, controla posiciones por activo y normaliza importes, comisiones y signos, produciendo una tabla `Transactions.csv` lista para análisis.  
+Este enfoque garantiza coherencia entre precios y transacciones, así como una separación clara entre datos raw y datos preparados para BI.  
+Se incluye un script en Python para la construcción de la tabla de transacciones a partir de datos brutos exportados del broker.    
 
 
-####🛠️ Herramientas utilizadas
+El script se encarga de:  
+· Normalizar compras y ventas  
+· Aplicar convenciones de signo para flujos de caja  
+· Gestionar comisiones  
+· Generar una tabla limpia lista para Power BI  
 
-· Power BI (modelado de datos, DAX, diseño del informe)
-· DAX (métricas de rentabilidad, riesgo y performance)
-· Python (preparación y limpieza de datos)
+
+#### 🛠️ Herramientas utilizadas
+
+· Power BI (modelado de datos, DAX, diseño del informe)  
+· DAX (métricas de rentabilidad, riesgo y performance)  
+· Python (preparación y limpieza de datos)  
 
 
 ### ⚠️ Limitaciones y mejoras futuras
-· Posible incorporación futura de métricas de rentabilidad ponderadas por tiempo o dinero.
-· Automatización del flujo de actualización de datos.
+· Posible incorporación futura de métricas de rentabilidad ponderadas por tiempo o dinero.  
+· Automatización del flujo de actualización de datos.  
 
 🔚 Nota final
 Este proyecto forma parte de un portfolio personal orientado a posiciones junior de Data / BI Analyst, con especial interés en análisis financiero y reporting.
